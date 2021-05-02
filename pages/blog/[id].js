@@ -1,8 +1,9 @@
-import Layout from "../../components/Layout";
-import { getAllPostIds, getPostContents } from "../../lib/posts";
-import Head from "next/head";
-import Date from "../../components/date";
-import utilStyles from "../utils.module.css";
+import PropTypes from 'prop-types';
+import Layout from '../../components/Layout';
+import { getAllPostIds, getPostContents } from '../../lib/posts';
+import Head from 'next/head';
+import Date from '../../components/date';
+import utilStyles from '../utils.module.css';
 
 export const getStaticProps = async ({ params }) => {
   const postData = await getPostContents(params.id);
@@ -33,5 +34,13 @@ const Post = ({ postData }) => (
     <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
   </Layout>
 );
+
+Post.propTypes = {
+  postData: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    contentHtml: PropTypes.string.isRequired,
+  }),
+};
 
 export default Post;

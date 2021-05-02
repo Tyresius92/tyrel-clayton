@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
 
-const InternalLink = ({ href, children }) => (
+const InternalLink = ({ href, children, ...props }) => (
   <Link href={href}>
-    <a>{children}</a>
+    <a {...props}>{children}</a>
   </Link>
 );
 
