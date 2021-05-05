@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import Layout from '../../components/Layout';
 import { getAllPostIds, getPostContents } from '../../lib/posts';
 import Head from 'next/head';
-import Date from '../../components/date';
+import Date from '../../components/Date';
+import TagList from '../../components/TagList';
 import utilStyles from '../utils.module.css';
 
 export const getStaticProps = async ({ params }) => {
@@ -32,6 +33,7 @@ const Post = ({ postData }) => (
       <Date dateString={postData.date} />
     </div>
     <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+    <TagList tags={postData.tags} />
   </Layout>
 );
 
@@ -40,6 +42,7 @@ Post.propTypes = {
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     contentHtml: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   }),
 };
 

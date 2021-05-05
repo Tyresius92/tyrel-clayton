@@ -3,7 +3,7 @@ import InternalLink from '../../components/InternalLink';
 import Layout from '../../components/Layout';
 import { getSortedPostsMetaData } from '../../lib/posts';
 import utilStyles from '../utils.module.css';
-import Date from '../../components/date';
+import Date from '../../components/Date';
 
 export const getStaticProps = async () => ({
   props: {

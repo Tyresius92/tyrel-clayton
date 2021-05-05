@@ -1,6 +1,12 @@
 ---
 title: "Fuck Bitcoin"
-date: "2021-05-02"
+date: "2021-05-01"
+category: "Personal Finance"
+tags:
+  - personal-finance
+  - investing
+  - cryptocurrency
+  - rant
 ---
 
 Seriously, fuck Bitcoin. Fuck cryptocurrency.

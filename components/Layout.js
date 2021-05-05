@@ -70,8 +70,12 @@ const Layout = ({ children, home }) => (
 );
 
 Layout.propTypes = {
-  home: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
+  home: PropTypes.bool,
+};
+
+Layout.defaultProps = {
+  home: false,
 };
 
 export default Layout;

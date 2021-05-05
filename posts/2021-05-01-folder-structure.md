@@ -1,6 +1,11 @@
 ---
 title: "Structuring application directories"
 date: "2021-05-01"
+category: "Software Development"
+tags:
+  - next-js
+  - architecture
+  - rant
 ---
 
 So, I'm working on building out a blogging platform (this site) using the [Next.js](https://nextjs.org) framework. By and large, I'm really happy with the framework, but as I'm running through the tutorial, I've got a gripe.
