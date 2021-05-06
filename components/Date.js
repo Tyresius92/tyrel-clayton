@@ -3,10 +3,6 @@ import { parseISO, format } from 'date-fns';
 
 const Date = ({ dateString }) => {
   const date = parseISO(dateString);
-  console.log('howdy ', {
-    date,
-    dateString,
-  });
   return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>;
 };
 

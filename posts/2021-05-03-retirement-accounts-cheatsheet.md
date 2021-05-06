@@ -49,4 +49,4 @@ This depends on your goals, of course, and all comes with the caveat that I have
 
 Generally speaking, you want to use Roth accounts when your income is lower, and you expect to make more in the future. Roth accounts are great for younger folks who have a long time before they'll be withdrawing. The longer the money sits and grows, the more gains you'll have that you don't have to pay taxes on. 
 
-If you're NOT planning on contributing the maximum amount, I tend to fund my IRAs first. Since I can invest in anything in an IRA, I can invest in whatever I like, rather than the handful of adequate investments available in the 401k plan chosen by my employer 
+If you're NOT planning on contributing the maximum amount, you should first see if your employer offers a matching program. If they do, you should contribute up to the match. After that, I tend to max out my IRA, and then go back and max out my 401k. I prefer to invest through my 401k so that I can invest in whatever I want, rather than the handful of acceptable funds that my employer happens to have chosen. 

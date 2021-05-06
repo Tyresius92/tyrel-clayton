@@ -8,10 +8,6 @@ import utilStyles from '../../utils.module.css';
 
 export const getStaticProps = ({ params }) => {
   const tagData = getAllPostsWithTag(params.tag);
-  console.log('staticProps', {
-    params,
-    tagData,
-  });
   return {
     props: {
       tag: params.tag,
