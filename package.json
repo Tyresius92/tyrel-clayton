@@ -11,7 +11,8 @@
     "checkPrettier": "prettier --config .prettierrc.json --ignore-path .prettierignore --check \"./**/*.js\"",
     "prettify": "prettier --config .prettierrc.json --ignore-path .prettierignore --write \"./**/*.js\"",
     "smellsGood": "node scripts/echo \"Great success!! Your code smells goooood!\" --font-color 92",
-    "sniff": "npm run checkPrettier && npm run lint && npm run smellsGood"
+    "sniff": "npm run checkPrettier && npm run lint && npm run smellsGood",
+    "nbp": "node scripts/newBlogPost"
   },
   "dependencies": {
     "date-fns": "^2.21.1",
