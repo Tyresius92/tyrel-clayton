@@ -1,7 +1,7 @@
 ---
 title: "Point Google Domains to Vercel Cheatsheet"
-date: "2021-05-03"
-category: "Personal Finance"
+date: "2021-05-05"
+category: "Software Engineering"
 tags:
   - web-development
   - software-engineering

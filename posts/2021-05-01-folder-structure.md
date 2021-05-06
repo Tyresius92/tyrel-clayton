@@ -1,9 +1,10 @@
 ---
 title: "Structuring application directories"
 date: "2021-05-01"
-category: "Software Development"
+category: "Software Engineering"
 tags:
   - next-js
+  - software-engineering
   - architecture
   - rant
 ---
