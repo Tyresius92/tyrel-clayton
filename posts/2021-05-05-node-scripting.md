@@ -5,6 +5,7 @@ category: "Software Engineering"
 tags:
   - software-engineering
   - node
+  - javascript
 ---
 
 Today I wrote a short script to stub out my blog post Markdown files. All of these markdown files begin with something that looks a bit like this: 
