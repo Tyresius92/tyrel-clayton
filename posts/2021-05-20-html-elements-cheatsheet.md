@@ -6,6 +6,7 @@ tags:
   - software-engineering
   - css
   - html
+  - cheatsheet
 ---
 
 ### Notes on CSS and Document types
