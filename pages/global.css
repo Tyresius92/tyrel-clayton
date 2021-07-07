@@ -45,3 +45,18 @@ code {
   color: deeppink;
   word-wrap: break-word;
 }
+
+table, th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+td:first-child {
+  font-weight: bold;
+}
