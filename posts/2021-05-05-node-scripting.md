@@ -33,6 +33,7 @@ PS. Here's my script, in full:
 const fs = require('fs');
 const path = require('path');
 
+// eslint-disable-next-line no-undef
 const args = process.argv;
 const newPostTitle = args[2];
 
@@ -44,8 +45,10 @@ const currentDate = `${today.getFullYear()}-${getPaddedNumString(
   today.getMonth() + 1
 )}-${getPaddedNumString(today.getDate())}`;
 
-const normalizedTitle = newPostTitle.toLowerCase().replace(/ /g, '-');
-
+const normalizedTitle = newPostTitle
+  .toLowerCase()
+  .replace(/ /g, '-')
+  .replace(/\?/g, '');
 const filename = `${currentDate}-${normalizedTitle}.md`;
 
 const fullPathName = path.join(process.cwd(), 'posts', filename);

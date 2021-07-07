@@ -32,9 +32,8 @@ const PostsWithTag = ({ tag, tagData }) => (
     <Head>
       <title>Posts tagged &ldquo;{tag}&rdquo;</title>
     </Head>
-    <div>Tag Page</div>
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-      <h2 className={utilStyles.headingLg}>Blog</h2>
+      <h2 className={utilStyles.headingLg}>Posts tagged &ldquo;{tag}&rdquo;</h2>
       <ul className={utilStyles.list}>
         {tagData.map(({ id, date, title }) => (
           <li className={utilStyles.listItem} key={id}>

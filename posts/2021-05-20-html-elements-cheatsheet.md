@@ -46,5 +46,5 @@ em: {
 }
 ```
 
-However, putting a `<p>` tag in an `<em>` tag is NOT okay. That would not be legal HTML, although some browsers my still force it to work.
+However, putting a `<p>` tag in an `<em>` tag is NOT okay. That would not be legal HTML, although some browsers may still force it to work.
 

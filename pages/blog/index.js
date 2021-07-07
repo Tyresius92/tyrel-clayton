@@ -13,7 +13,7 @@ export const getStaticProps = async () => ({
 
 const BlogIndex = ({ allPostsData }) => (
   <Layout>
-    <h1>Blog Index</h1>
+    <h1>All My Posts</h1>
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
       <h2 className={utilStyles.headingLg}>Blog</h2>
       <ul className={utilStyles.list}>
