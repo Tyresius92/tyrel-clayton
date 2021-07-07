@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Layout from '../../components/Layout';
+import BlogLayout from '../../components/BlogLayout';
 import { getAllPostIds, getPostContents } from '../../lib/posts';
 import Head from 'next/head';
 import Date from '../../components/Date';
@@ -24,7 +24,7 @@ export const getStaticPaths = async () => {
 };
 
 const Post = ({ postData }) => (
-  <Layout>
+  <BlogLayout>
     <Head>
       <title>{postData.title}</title>
     </Head>
@@ -34,7 +34,7 @@ const Post = ({ postData }) => (
     </div>
     <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     <TagList tags={postData.tags} />
-  </Layout>
+  </BlogLayout>
 );
 
 Post.propTypes = {

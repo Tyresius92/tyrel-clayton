@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Layout from '../../../components/Layout';
+import BlogLayout from '../../../components/BlogLayout';
 import Tag from '../../../components/Tag';
 import { getAllPostTags } from '../../../lib/posts';
 import utilStyles from '../../utils.module.css';
@@ -11,8 +11,8 @@ export const getStaticProps = async () => ({
 });
 
 const TagsIndex = ({ allTagsData }) => (
-  <Layout>
-    <h1>This is the tags page</h1>
+  <BlogLayout>
+    <h1>Posts By Tag</h1>
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
       {allTagsData.map(({ tag, count }) => (
         <div key={tag}>
@@ -20,7 +20,7 @@ const TagsIndex = ({ allTagsData }) => (
         </div>
       ))}
     </section>
-  </Layout>
+  </BlogLayout>
 );
 
 TagsIndex.propTypes = {

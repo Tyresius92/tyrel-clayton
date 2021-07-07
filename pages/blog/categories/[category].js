@@ -2,24 +2,29 @@ import PropTypes from 'prop-types';
 import BlogLayout from '../../../components/BlogLayout';
 import InternalLink from '../../../components/InternalLink';
 import Date from '../../../components/Date';
-import { getAllPostsWithTag, getAllPostTags } from '../../../lib/posts';
+import {
+  getAllPostCategories,
+  getAllPostsWithCategory,
+} from '../../../lib/posts';
 import Head from 'next/head';
 import utilStyles from '../../utils.module.css';
 
 export const getStaticProps = ({ params }) => {
-  const tagData = getAllPostsWithTag(params.tag);
+  const categoryData = getAllPostsWithCategory(params.category);
   return {
     props: {
-      tag: params.tag,
-      tagData,
+      category: params.category,
+      categoryData,
     },
   };
 };
 
 export const getStaticPaths = async () => {
-  const tags = getAllPostTags().map(tagObj => tagObj.tag);
+  const categories = getAllPostCategories().map(
+    categoryObj => categoryObj.category
+  );
 
-  const paths = tags.map(tag => ({ params: { tag } }));
+  const paths = categories.map(category => ({ params: { category } }));
 
   return {
     paths,
@@ -27,15 +32,17 @@ export const getStaticPaths = async () => {
   };
 };
 
-const PostsWithTag = ({ tag, tagData }) => (
+const PostsWithCategory = ({ category, categoryData }) => (
   <BlogLayout>
     <Head>
-      <title>Posts tagged &ldquo;{tag}&rdquo;</title>
+      <title>Posts categorized &ldquo;{category}&rdquo;</title>
     </Head>
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-      <h2 className={utilStyles.headingLg}>Posts tagged &ldquo;{tag}&rdquo;</h2>
+      <h2 className={utilStyles.headingLg}>
+        Posts categorized &ldquo;{category}&rdquo;
+      </h2>
       <ul className={utilStyles.list}>
-        {tagData.map(({ id, date, title }) => (
+        {categoryData.map(({ id, date, title }) => (
           <li className={utilStyles.listItem} key={id}>
             <InternalLink href={`/blog/${id}`}>{title}</InternalLink>
             <br />
@@ -49,9 +56,9 @@ const PostsWithTag = ({ tag, tagData }) => (
   </BlogLayout>
 );
 
-PostsWithTag.propTypes = {
-  tag: PropTypes.string.isRequired,
-  tagData: PropTypes.arrayOf(
+PostsWithCategory.propTypes = {
+  category: PropTypes.string.isRequired,
+  categoryData: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
@@ -60,4 +67,4 @@ PostsWithTag.propTypes = {
   ).isRequired,
 };
 
-export default PostsWithTag;
+export default PostsWithCategory;
