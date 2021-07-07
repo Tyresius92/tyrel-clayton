@@ -33,7 +33,7 @@ Most employers offer only a Traditional 401k, but some offer both a Traditional 
 
 When setting up an IRA at a brokerage, you'll be asked whether you want a Traditional or a Roth IRA. 
 
-(If you're looking for a brokerage, I use and recommend [Betterment](www.betterment.com), as they automate most of the work for you)
+(If you're looking for a brokerage, I use and recommend [Betterment](https://www.betterment.com), as they automate most of the work for you)
 
 ### Contribution Limits
 
