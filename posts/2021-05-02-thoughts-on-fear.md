@@ -6,6 +6,8 @@ tags:
   - fear
   - self-doubt
   - meta
+  - life
+  - approaching-living
 ---
 
 Good golly I'm nervous. I'm a pretty introverted guy by nature. Putting things out into the world for other people to see is scary, and I don't generally do it. 

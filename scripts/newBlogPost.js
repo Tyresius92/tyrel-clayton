@@ -13,7 +13,10 @@ const currentDate = `${today.getFullYear()}-${getPaddedNumString(
   today.getMonth() + 1
 )}-${getPaddedNumString(today.getDate())}`;
 
-const normalizedTitle = newPostTitle.toLowerCase().replace(/ /g, '-');
+const normalizedTitle = newPostTitle
+  .toLowerCase()
+  .replace(/ /g, '-')
+  .replace(/\?/g, '');
 const filename = `${currentDate}-${normalizedTitle}.md`;
 
 const fullPathName = path.join(process.cwd(), 'posts', filename);
