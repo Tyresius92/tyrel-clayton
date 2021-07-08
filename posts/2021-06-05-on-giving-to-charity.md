@@ -23,7 +23,7 @@ I graduated college, and started working, just living my post-college life.
 
 Then, about five years ago, I listened to an episode of the Listen Money Matters podcast, and they talked about a study which showed that one of the most effective ways to increase your personal happiness is to give to charity. 
 
-That made sense to me, so within a couple of days, I began donating to a few different charities, including MFOS. The amounts were small, about $20 a month to each of them. I can't say it was the most responsible decision: I had $15K in student loan debt, and $8K in credit card debt, all while making about $40K per year. 
+That made sense to me, so within a couple of days, I began donating to a few different charities, including MFOS. The amounts were small, about $20 a month to each of them. I can't say it was the most responsible decision: I had $15K in student loan debt (I took out loans so I could take classes in the summer), and $8K in credit card debt, all while making about $40K per year. 
 
 But something about it felt _right_. It made me feel good to give back. It made me happy to know that I was helping causes that I believed in. All the claims made in the podcast were true, and even more, I was helping these organizations do good work.
 
