@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-undef
 const fs = require('fs');
+// eslint-disable-next-line no-undef
 const path = require('path');
 
 // eslint-disable-next-line no-undef
@@ -19,10 +21,12 @@ const normalizedTitle = newPostTitle
   .replace(/\?/g, '');
 const filename = `${currentDate}-${normalizedTitle}.md`;
 
+// eslint-disable-next-line no-undef
 const fullPathName = path.join(process.cwd(), 'posts', filename);
 
 if (fs.existsSync(fullPathName)) {
   console.log(`Error: File with name ${fullPathName} already exists`);
+  // eslint-disable-next-line no-undef
   process.exit(1);
 }
 
@@ -38,4 +42,5 @@ fs.writeFileSync(fullPathName, yaml);
 
 console.log(`New file created at ${fullPathName}`);
 
+// eslint-disable-next-line no-undef
 process.exit(0);

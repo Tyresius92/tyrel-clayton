@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './Layout.module.css';
 import Link from 'next/link';
 import Layout from './Layout';
@@ -14,5 +15,14 @@ const BlogLayout = ({ children, blogHome, ...rest }) => (
     )}
   </Layout>
 );
+
+BlogLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+  blogHome: PropTypes.bool,
+};
+
+BlogLayout.defaultProps = {
+  blogHome: false,
+};
 
 export default BlogLayout;
