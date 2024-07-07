@@ -77,9 +77,9 @@ export default function Join() {
   const passwordRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (actionData?.errors?.email) {
+    if (actionData?.errors.email) {
       emailRef.current?.focus();
-    } else if (actionData?.errors?.password) {
+    } else if (actionData?.errors.password) {
       passwordRef.current?.focus();
     }
   }, [actionData]);
@@ -100,10 +100,10 @@ export default function Join() {
                 name="email"
                 type="email"
                 autoComplete="email"
-                aria-invalid={actionData?.errors?.email ? true : undefined}
+                aria-invalid={actionData?.errors.email ? true : undefined}
                 aria-describedby="email-error"
               />
-              {actionData?.errors?.email ? (
+              {actionData?.errors.email ? (
                 <div>{actionData.errors.email}</div>
               ) : null}
             </div>
@@ -118,10 +118,10 @@ export default function Join() {
                 name="password"
                 type="password"
                 autoComplete="new-password"
-                aria-invalid={actionData?.errors?.password ? true : undefined}
+                aria-invalid={actionData?.errors.password ? true : undefined}
                 aria-describedby="password-error"
               />
-              {actionData?.errors?.password ? (
+              {actionData?.errors.password ? (
                 <div>{actionData.errors.password}</div>
               ) : null}
             </div>

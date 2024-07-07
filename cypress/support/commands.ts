@@ -60,6 +60,13 @@ function login({
   return cy.get("@user");
 }
 
+function deleteUserByEmail(email: string) {
+  cy.exec(
+    `npx ts-node -r tsconfig-paths/register ./cypress/support/delete-user.ts "${email}"`,
+  );
+  cy.clearCookie("__session");
+}
+
 function cleanupUser({ email }: { email?: string } = {}) {
   if (email) {
     deleteUserByEmail(email);
@@ -71,13 +78,6 @@ function cleanupUser({ email }: { email?: string } = {}) {
       }
     });
   }
-  cy.clearCookie("__session");
-}
-
-function deleteUserByEmail(email: string) {
-  cy.exec(
-    `npx ts-node -r tsconfig-paths/register ./cypress/support/delete-user.ts "${email}"`,
-  );
   cy.clearCookie("__session");
 }
 

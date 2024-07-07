@@ -44,7 +44,7 @@ async function seed() {
 }
 
 seed()
-  .catch((e) => {
+  .catch((e: unknown) => {
     console.error(e);
     process.exit(1);
   })
