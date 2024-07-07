@@ -22,11 +22,21 @@ module.exports = {
 
   // Base config
   extends: ["eslint:recommended"],
+  rules: {
+    "array-callback-return": ["error", { checkForEach: true }],
+    "no-await-in-loop": "error",
+    "no-constant-binary-expression": "error",
+    "no-duplicate-imports": "error",
+    "no-nested-ternary": "error",
+    "no-self-compare": "error",
+    "no-template-curly-in-string": "error",
+    "no-use-before-define": "error",
+  },
 
   overrides: [
     // React
     {
-      files: ["**/*.{js,jsx,ts,tsx}"],
+      files: ["**/*.{js,jsx,ts,tsx}", "!cypress.config.ts"],
       plugins: ["react", "jsx-a11y"],
       extends: [
         "plugin:react/recommended",
@@ -58,6 +68,9 @@ module.exports = {
       files: ["**/*.{ts,tsx}"],
       plugins: ["@typescript-eslint", "import"],
       parser: "@typescript-eslint/parser",
+      parserOptions: {
+        project: ["./tsconfig.json"],
+      },
       settings: {
         "import/internal-regex": "^~/",
         "import/resolver": {
@@ -70,8 +83,8 @@ module.exports = {
         },
       },
       extends: [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/stylistic",
+        "plugin:@typescript-eslint/strict-type-checked",
+        "plugin:@typescript-eslint/stylistic-type-checked",
         "plugin:import/recommended",
         "plugin:import/typescript",
         "prettier",
@@ -85,6 +98,18 @@ module.exports = {
             "newlines-between": "always",
           },
         ],
+
+        "no-duplicate-imports": "off",
+        "import/no-duplicates": "error",
+
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": "error",
+
+        // disable this rule because remix commonly throws `redirect`
+        "@typescript-eslint/only-throw-error": "off",
+
+        // this is just overly strict
+        "@typescript-eslint/restrict-template-expressions": "off",
       },
     },
 
@@ -122,12 +147,15 @@ module.exports = {
     {
       files: ["cypress/**/*.ts"],
       plugins: ["cypress"],
+      parserOptions: {
+        project: ["./cypress/tsconfig.json"],
+      },
       extends: ["plugin:cypress/recommended", "prettier"],
     },
 
     // Node
     {
-      files: [".eslintrc.js", "mocks/**/*.js"],
+      files: [".eslintrc.cjs", "mocks/**/*.js"],
       env: {
         node: true,
       },

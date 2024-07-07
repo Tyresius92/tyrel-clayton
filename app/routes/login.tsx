@@ -66,15 +66,15 @@ export const meta: MetaFunction = () => [{ title: "Login" }];
 
 export default function LoginPage() {
   const [searchParams] = useSearchParams();
-  const redirectTo = searchParams.get("redirectTo") || "/notes";
+  const redirectTo = searchParams.get("redirectTo") ?? "/notes";
   const actionData = useActionData<typeof action>();
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (actionData?.errors?.email) {
+    if (actionData?.errors.email) {
       emailRef.current?.focus();
-    } else if (actionData?.errors?.password) {
+    } else if (actionData?.errors.password) {
       passwordRef.current?.focus();
     }
   }, [actionData]);
@@ -95,10 +95,10 @@ export default function LoginPage() {
                 name="email"
                 type="email"
                 autoComplete="email"
-                aria-invalid={actionData?.errors?.email ? true : undefined}
+                aria-invalid={actionData?.errors.email ? true : undefined}
                 aria-describedby="email-error"
               />
-              {actionData?.errors?.email ? (
+              {actionData?.errors.email ? (
                 <div>{actionData.errors.email}</div>
               ) : null}
             </div>
@@ -113,10 +113,10 @@ export default function LoginPage() {
                 name="password"
                 type="password"
                 autoComplete="current-password"
-                aria-invalid={actionData?.errors?.password ? true : undefined}
+                aria-invalid={actionData?.errors.password ? true : undefined}
                 aria-describedby="password-error"
               />
-              {actionData?.errors?.password ? (
+              {actionData?.errors.password ? (
                 <div>{actionData.errors.password}</div>
               ) : null}
             </div>

@@ -34,4 +34,6 @@ async function deleteUser(email: string) {
   }
 }
 
+// this is a util for one off stuff
+// eslint-disable-next-line
 deleteUser(process.argv[2]);
