@@ -23,14 +23,14 @@ module.exports = {
   // Base config
   extends: ["eslint:recommended"],
   rules: {
-    'array-callback-return': ["error", { checkForEach: true }],
-    'no-await-in-loop': 'error',
-    'no-constant-binary-expression': 'error',
-    'no-duplicate-imports': 'error',
-    'no-nested-ternary': 'error',
-    'no-self-compare': 'error',
-    'no-template-curly-in-string': 'error',
-    'no-use-before-define': 'error',
+    "array-callback-return": ["error", { checkForEach: true }],
+    "no-await-in-loop": "error",
+    "no-constant-binary-expression": "error",
+    "no-duplicate-imports": "error",
+    "no-nested-ternary": "error",
+    "no-self-compare": "error",
+    "no-template-curly-in-string": "error",
+    "no-use-before-define": "error",
   },
 
   overrides: [
@@ -69,7 +69,7 @@ module.exports = {
       plugins: ["@typescript-eslint", "import"],
       parser: "@typescript-eslint/parser",
       parserOptions: {
-        project: ["./tsconfig.json"]
+        project: ["./tsconfig.json"],
       },
       settings: {
         "import/internal-regex": "^~/",
@@ -99,17 +99,17 @@ module.exports = {
           },
         ],
 
-        'no-duplicate-imports': 'off',
-        'import/no-duplicates': 'error',
+        "no-duplicate-imports": "off",
+        "import/no-duplicates": "error",
 
-        'no-use-before-define': 'off',
-        '@typescript-eslint/no-use-before-define': "error",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": "error",
 
         // disable this rule because remix commonly throws `redirect`
-        '@typescript-eslint/only-throw-error': 'off',
+        "@typescript-eslint/only-throw-error": "off",
 
         // this is just overly strict
-        '@typescript-eslint/restrict-template-expressions': 'off'
+        "@typescript-eslint/restrict-template-expressions": "off",
       },
     },
 
@@ -148,7 +148,7 @@ module.exports = {
       files: ["cypress/**/*.ts"],
       plugins: ["cypress"],
       parserOptions: {
-        project: ['./cypress/tsconfig.json']
+        project: ["./cypress/tsconfig.json"],
       },
       extends: ["plugin:cypress/recommended", "prettier"],
     },

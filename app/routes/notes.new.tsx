@@ -67,9 +67,7 @@ export default function NewNotePage() {
             }
           />
         </label>
-        {actionData?.errors.title ? (
-          <div>{actionData.errors.title}</div>
-        ) : null}
+        {actionData?.errors.title ? <div>{actionData.errors.title}</div> : null}
       </div>
 
       <div>

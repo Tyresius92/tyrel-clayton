@@ -37,7 +37,7 @@ export async function getUserId(
   request: Request,
 ): Promise<User["id"] | undefined> {
   const session = await getSession(request);
-  const userId: User['id'] = session.get(USER_SESSION_KEY) as string;
+  const userId: User["id"] = session.get(USER_SESSION_KEY) as string;
   return userId;
 }
 
