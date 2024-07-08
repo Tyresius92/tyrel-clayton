@@ -1,6 +1,7 @@
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import {
+  Link,
   Links,
   Meta,
   Outlet,
@@ -25,8 +26,22 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
-        <Outlet />
+      <body style={{margin: 0}}>
+        <nav>
+          <div style={{display: 'flex', justifyContent: 'space-between', backgroundColor: '#d0d0d0', padding: 16}}>
+            <div>
+              <Link to="/">
+                Tyrel Clayton
+              </Link>
+            </div>
+            <div>
+              More links will go here eventually
+            </div>
+          </div>
+        </nav>
+        <main style={{padding: 16}}>
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
       </body>
